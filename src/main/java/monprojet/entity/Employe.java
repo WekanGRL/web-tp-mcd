@@ -9,6 +9,7 @@ import lombok.*;
 // On utilise Lombok pour auto-générer getter / setter / toString...
 // cf. https://examples.javacodegeeks.com/spring-boot-with-lombok/
 @Getter @Setter @NoArgsConstructor @RequiredArgsConstructor @ToString
+@Inheritance(strategy = InheritanceType.JOINED)
 @Entity
 public class Employe {
     @Id  @GeneratedValue(strategy = GenerationType.IDENTITY) 
