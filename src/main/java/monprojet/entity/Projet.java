@@ -1,10 +1,7 @@
 package monprojet.entity;
 
 import jakarta.annotation.Nullable;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDate;
@@ -24,4 +21,8 @@ public class Projet {
 
     @Nullable
     private LocalDate dateFin;
+
+    @ToString.Exclude
+    @OneToMany(mappedBy = "affectation")
+    private java.util.List<Participation> partipations;
 }

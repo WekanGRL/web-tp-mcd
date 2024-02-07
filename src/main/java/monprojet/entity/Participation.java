@@ -1,8 +1,6 @@
 package monprojet.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.*;
 
 @Getter @Setter @NoArgsConstructor @RequiredArgsConstructor @ToString
@@ -17,4 +15,10 @@ public class Participation {
 
     @NonNull
     private float pourcentage;
+
+    @ManyToOne
+    private Employe contributeur;
+
+    @ManyToOne
+    private Projet affectation;
 }
