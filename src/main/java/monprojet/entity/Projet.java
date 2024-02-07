@@ -17,10 +17,10 @@ public class Projet {
     private String nom;
 
     @NonNull
-    private LocalDate dateDebut;
+    private LocalDate debut;
 
     @Nullable
-    private LocalDate dateFin;
+    private LocalDate fin;
 
     @ToString.Exclude
     @OneToMany(mappedBy = "affectation")

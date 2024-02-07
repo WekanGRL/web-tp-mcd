@@ -7,7 +7,7 @@ import lombok.*;
 @Entity
 public class Participation {
 
-    @Id @GeneratedValue
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     @NonNull
